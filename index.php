@@ -1,0 +1,17 @@
+namespace Database;
+date_default_timezone_set("PRC");
+require_once('Model.php');
+$user = Model::table('user');
+//$result = $user->select();
+//$result = $user->data(['name'=>'lucy','age'=>46,'sex'=>'female','time'=>date('Y-m-d h:i:s')])->insert();
+//$result = $user->data(['age'=>100])->where('name=?',['vabora'])->update();
+//$result = $user->where('age > ?',[50])->delete();
+//$result = $user->clear();
+//$result = Model::query('select * from user');
+//$result = $user->count();
+//$result = $user->where('age>?',[25])->order(['age'=>'desc','name'=>'des'])->list();
+//$result = $user->fields('user');
+//$result = Model::backup('demo.sql');
+//$result = Model::recover('demo.sql');
+$result = $user->info();
+var_export($result);
